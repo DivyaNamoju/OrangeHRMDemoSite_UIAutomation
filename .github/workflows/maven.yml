@@ -35,13 +35,22 @@ jobs:
       - name: Build with Maven (tests + report)
         run: mvn -B clean verify
 
-      - name: Debug - list everything under target
-        run: ls -R ./target || true
+      - name: Create index.html for GitHub Pages
+        run: |
+          cp ./target/cucumber-report-html/cucumber-html-reports/overview-features.html \
+             ./target/cucumber-report-html/cucumber-html-reports/index.html
 
-      - name: Upload report artifact
+      - name: Upload Cucumber HTML report artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./target/cucumber-report-html/cucumber-html-reports
 
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+
+    steps:
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
