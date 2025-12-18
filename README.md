@@ -57,11 +57,9 @@ src/
         TestRunnerTestNG.java
         TestRunnerTestNGParallel.java
       utils/
-        Hooks_backup.java
         ReadProperties.java
     resources/
       log4j2.properties
-      log4j2_backup.properties
 suites/
   testng.xml
 target/
@@ -104,37 +102,6 @@ mvn test
 ```bash
 mvn -Dtest=TestRunnerJunit test
 ```
-
-- Use the JUnit Cucumber runner (`TestRunnerJunit.java`) by running that test class from your IDE or via Surefire if configured.
-
----
-
-### 🔧 Sample runner commands
-
-- Run default TestNG suite (uses `suites/testng.xml`):
-
-```bash
-mvn test
-```
-
-- Run the JUnit Cucumber runner from Maven (example):
-
-```bash
-mvn -Dtest=TestRunnerJunit test
-```
-
-- Run the TestNG-specific runner/class (example):
-
-```bash
-mvn -Dtest=TestRunnerTestNG test
-```
-
-- Run only scenarios with a tag (Cucumber filter; V6+):
-
-```bash
-mvn test -Dcucumber.filter.tags="@smoke"
-```
-
 - Generate the cucumber HTML report (the reporting plugin runs in `verify` phase):
 
 ```bash
@@ -144,7 +111,7 @@ mvn verify
 
 ---
 
-## 🔁 CI / CD — GitHub Actions & Jenkins
+## 🔁 CI / CD — GitHub Actions
 
 This project can be run in CI using GitHub Actions or Jenkins. Below are example configurations and recommendations.
 
@@ -241,13 +208,4 @@ Reports and artifacts are stored under `target/` — e.g., `target/cucumber.json
 2. Implement step definitions in `src/test/java/stepDefinitions/` (create new classes as needed).
 3. Add or update Page Object classes in `src/test/java/pageObjects/`.
 4. Run the feature using the appropriate runner (TestNG or JUnit runner).
-
----
-
-## ✅ Best Practices & Notes
-
-- Keep feature files readable and focused (one scenario per behavior).
-- Use Page Object Model for stable, reusable UI interactions.
-- Capture screenshots on failure and keep logs for debugging.
-- Keep sensitive values out of repo (use environment variables or a secured property management).
 
