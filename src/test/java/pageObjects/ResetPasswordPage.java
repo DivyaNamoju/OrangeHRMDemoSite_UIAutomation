@@ -1,7 +1,7 @@
 package pageObjects;
 
 import baseClass.BaseClass;
-import static utils.Hooks_backup.log;
+import static hooks.Hooks.log;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
