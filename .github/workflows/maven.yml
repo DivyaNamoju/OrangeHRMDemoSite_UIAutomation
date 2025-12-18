@@ -35,8 +35,8 @@ jobs:
       - name: Build with Maven (tests + report)
         run: mvn -B clean verify
 
-      - name: Debug - list report folder
-        run: ls -R ./target/cucumber-reports/cucumber-html-reports
+      - name: Debug - list everything under target
+        run: ls -R ./target || true
 
       - name: Deploy report page to GitHub Page
         uses: peaceiris/actions-gh-pages@v3
