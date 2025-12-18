@@ -1,6 +1,7 @@
 # Login functionality feature
 
 Feature: Login functionality feature
+
   @login
   Scenario: TC_001 Validate that user can login using the valid login credentials
     Given user is on application login page
