@@ -27,10 +27,13 @@ jobs:
         with:
           distribution: temurin
           java-version: 17
+      - name: Build with Maven (tests + report)
+        run: mvn -B clean verify
+
       - name: Upload Cucumber HTML report artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./target/cucumber-reports
+          path: ./target/cucumber-reports/cucumber-html-reports
 
   deploy:
     needs: build
