@@ -1,5 +1,5 @@
-2025-12-18 11:13:09 INFO  Hooks - Navigated to application URL
-2025-12-18 11:13:10 INFO  Hooks - Enter username : Admin
-2025-12-18 11:13:10 INFO  Hooks - Entered password : admin123
-2025-12-18 11:13:10 INFO  Hooks - Clicked in Login button
-2025-12-18 11:13:11 INFO  Hooks - Scenario TC_001 Validate that user can login using the valid login credentials is Passed
+2025-12-18 13:54:08 INFO  Hooks - Navigated to application URL
+2025-12-18 13:54:08 INFO  Hooks - Enter username : Admin
+2025-12-18 13:54:08 INFO  Hooks - Entered password : admin123
+2025-12-18 13:54:08 INFO  Hooks - Clicked in Login button
+2025-12-18 13:54:59 INFO  Hooks - Scenario TC_001 Validate that user can login using the valid login credentials is Passed

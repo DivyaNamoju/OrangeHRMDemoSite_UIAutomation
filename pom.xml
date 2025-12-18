@@ -109,9 +109,9 @@
                         </goals>
                         <configuration>
                             <jsonFiles>
-                                <param>target/cucumber*.json</param>
+                                <param>**/cucumber*.json</param>
                             </jsonFiles>
-                            <outputDirectory>target/cucumber-reports</outputDirectory>
+                            <outputDirectory>target/cucumber-report-html</outputDirectory>
                             <inputDirectory>target/</inputDirectory>
                         </configuration>
                     </execution>
