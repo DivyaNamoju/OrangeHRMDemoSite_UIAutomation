@@ -29,12 +29,8 @@ jobs:
           java-version: 17
       - name: Build with Maven
         run: mvn -B clean verify
-      - uses: deblockt/cucumber-report-annotations-action@v1.7
-        with:
-          access-token: ${{ secrets.GITHUB_TOKEN }}
-          path: "**/cucumber*.json"
-      - name: Deploy report page to GitHub Page
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./target
+          publish_dir: ./target/cucumber-reports/cucumber-html-reports
