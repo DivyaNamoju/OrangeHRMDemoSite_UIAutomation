@@ -38,8 +38,10 @@ jobs:
       - name: Debug - list everything under target
         run: ls -R ./target || true
 
-      - name: Deploy report page to GitHub Page
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload report artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-            github_token: ${{ secrets.GH_PAT }}
-            publish_dir: ./target/cucumber-report-html/cucumber-html-reports
+          path: ./target/cucumber-report-html/cucumber-html-reports
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
