@@ -27,10 +27,16 @@ jobs:
         with:
           distribution: temurin
           java-version: 17
-      - name: Build with Maven
-        run: mvn -B clean verify
-      - name: Deploy Cucumber Report to Github Page
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Upload Cucumber HTML report artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./target/cucumber-reports
+          path: ./target/cucumber-reports/cucumber-html-reports
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
