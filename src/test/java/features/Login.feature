@@ -17,7 +17,7 @@ Feature: Login functionality feature
     And clicks on Login button
     Then a warning is displayed
     """
-    Invalids credentials
+    Invalid credentials
     """
 
   @login
