@@ -108,11 +108,11 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <projectName>Automation Framework</projectName>
-                            <outputDirectory>target/cucumber-report</outputDirectory>
                             <jsonFiles>
-                                <param>target/cucumber.json</param>
+                                <param>**/cucumber*.json</param>
                             </jsonFiles>
+                            <outputDirectory>target/cucumber-reports</outputDirectory>
+                            <inputDirectory>target/</inputDirectory>
                         </configuration>
                     </execution>
                 </executions>
