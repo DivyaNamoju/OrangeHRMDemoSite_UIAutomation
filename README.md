@@ -113,7 +113,7 @@ mvn verify
 
 ## 🔁 CI / CD — GitHub Actions
 
-This project can be run in CI using GitHub Actions. Maven Cucumber reporting can accessed at:
+This project can be run in CI using GitHub Actions. Maven Cucumber reporting can be accessed at:
 
 [https://github.com/DivyaNamoju/OrangeHRMDemoSite_UIAutomation](https://divyanamoju.github.io/OrangeHRMDemoSite_UIAutomation/)
 
@@ -145,9 +145,7 @@ When you run `mvn test` you will see an output similar to the following (truncat
 
 - **Java**: Install Java 17 and set `JAVA_HOME`.
 - **Maven**: Install Maven and ensure `mvn` is in PATH.
-- **Browsers & Drivers**: Ensure browsers are installed (Chrome, Firefox) and corresponding WebDriver binaries are available, or configure automatic driver management in `DriverManager`.
-
-> Tip: The `DriverManager` usually controls WebDriver setup; check `src/test/java/baseClass/DriverManager.java` to confirm how drivers are managed in your environment.
+- **Browsers & Drivers**: The `DriverManager` usually controls WebDriver setup; check `src/test/java/baseClass/DriverManager.java` to confirm how drivers are managed in your environment.
 
 ---
 
