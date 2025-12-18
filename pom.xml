@@ -90,7 +90,7 @@
                 <version>3.5.4</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>suites/testngUnitTest.xml</suiteXmlFile>
+                        <suiteXmlFile>suites/testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

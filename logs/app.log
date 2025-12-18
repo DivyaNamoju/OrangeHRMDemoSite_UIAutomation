@@ -1,5 +1,43 @@
-2025-12-18 13:54:08 INFO  Hooks - Navigated to application URL
-2025-12-18 13:54:08 INFO  Hooks - Enter username : Admin
-2025-12-18 13:54:08 INFO  Hooks - Entered password : admin123
-2025-12-18 13:54:08 INFO  Hooks - Clicked in Login button
-2025-12-18 13:54:59 INFO  Hooks - Scenario TC_001 Validate that user can login using the valid login credentials is Passed
+2025-12-18 15:41:08 INFO  Hooks - Navigated to application URL
+2025-12-18 15:41:10 INFO  Hooks - Enter username : Admin
+2025-12-18 15:41:10 INFO  Hooks - Entered password : admin123
+2025-12-18 15:41:10 INFO  Hooks - Clicked in Login button
+2025-12-18 15:42:00 INFO  Hooks - Scenario TC_001 Validate that user can login using the valid login credentials is Passed
+2025-12-18 15:42:04 INFO  Hooks - Navigated to application URL
+2025-12-18 15:42:05 INFO  Hooks - Enter username : Admin
+2025-12-18 15:42:05 INFO  Hooks - Entered password : admin1234
+2025-12-18 15:42:05 INFO  Hooks - Clicked in Login button
+2025-12-18 15:42:06 INFO  Hooks - Warning message : true
+2025-12-18 15:42:06 INFO  Hooks - Invalid credentials
+2025-12-18 15:42:06 INFO  Hooks - Scenario TC_002 Validate a warning message is displayed when user logs in using invalid credentials is Failed
+2025-12-18 15:42:09 INFO  Hooks - Navigated to application URL
+2025-12-18 15:42:10 INFO  Hooks - Enter username : Admin
+2025-12-18 15:42:10 INFO  Hooks - Entered password : admin
+2025-12-18 15:42:10 INFO  Hooks - Clicked in Login button
+2025-12-18 15:42:11 INFO  Hooks - Warning message : true
+2025-12-18 15:42:11 INFO  Hooks - Invalid credentials
+2025-12-18 15:42:11 INFO  Hooks - Scenario TC_003 Validate a warning message is displayed when user logs in using invalid credentials is Passed
+2025-12-18 15:42:14 INFO  Hooks - Navigated to application URL
+2025-12-18 15:42:15 INFO  Hooks - Enter username : Admin123
+2025-12-18 15:42:15 INFO  Hooks - Entered password : admin
+2025-12-18 15:42:15 INFO  Hooks - Clicked in Login button
+2025-12-18 15:42:16 INFO  Hooks - Warning message : true
+2025-12-18 15:42:16 INFO  Hooks - Invalid credentials
+2025-12-18 15:42:16 INFO  Hooks - Scenario TC_003 Validate a warning message is displayed when user logs in using invalid credentials is Passed
+2025-12-18 15:42:18 INFO  Hooks - Navigated to application URL
+2025-12-18 15:42:20 INFO  Hooks - Enter username : Admin
+2025-12-18 15:42:20 INFO  Hooks - Entered password : Pass$1234
+2025-12-18 15:42:20 INFO  Hooks - Clicked in Login button
+2025-12-18 15:42:21 INFO  Hooks - Warning message : true
+2025-12-18 15:42:21 INFO  Hooks - Invalid credentials
+2025-12-18 15:42:21 INFO  Hooks - Scenario TC_003 Validate a warning message is displayed when user logs in using invalid credentials is Passed
+2025-12-18 15:42:24 INFO  Hooks - Navigated to application URL
+2025-12-18 15:42:24 INFO  Hooks - Number of footer links : 4
+2025-12-18 15:42:26 INFO  Hooks - Current URL : https://www.linkedin.com/company/orangehrm Index : 0
+2025-12-18 15:42:31 INFO  Hooks - Current URL : https://www.facebook.com/OrangeHRM/ Index : 1
+2025-12-18 15:42:35 INFO  Hooks - Current URL : https://x.com/orangehrm?lang=en Index : 2
+2025-12-18 15:42:36 INFO  Hooks - Current URL : https://consent.youtube.com/m?continue=https%3A%2F%2Fwww.youtube.com%2Fc%2FOrangeHRMInc%3Fcbrd%3D1&gl=GB&m=0&pc=yt&cm=2&hl=en-GB&src=1 Index : 3
+2025-12-18 15:42:36 INFO  Hooks - Scenario TC_005 Validate the social media links in the footer section of the application is Passed
+2025-12-18 15:42:39 INFO  Hooks - Navigated to application URL
+2025-12-18 15:42:40 INFO  Hooks - Navigated to application URL
+2025-12-18 15:42:41 INFO  Hooks - Scenario TC_004 Validate Forgot Password functionality is Failed

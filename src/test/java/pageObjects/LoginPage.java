@@ -11,8 +11,11 @@ import org.openqa.selenium.support.FindBy;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.Objects;
+
 import static hooks.Hooks.log;
 import static org.testng.AssertJUnit.assertEquals;
+import static org.testng.AssertJUnit.assertTrue;
 
 public class LoginPage extends BasePage {
 
@@ -74,15 +77,16 @@ public class LoginPage extends BasePage {
         log.info("Number of footer links : {}", footerLinks.size());
         for(int i=0;i<footerLinks.size();i++)
         {
-            footerLinks.get(i).click(); // window should have 2 tabs now
+            footerLinks.get(i).click();
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
             Object[] windowHandles = driver.getWindowHandles().toArray();
             driver.switchTo().window((String)windowHandles[1]);// Switch to the other tab
             log.info("Current URL : " + driver.getCurrentUrl() + " Index : " + i);
             switch(i){
-                case 0: assertEquals(LINKEDIN_URL,driver.getCurrentUrl());
-                case 1: assertEquals(FACEBOOK_URL,driver.getCurrentUrl());
-                case 2: assertEquals(X_URL,driver.getCurrentUrl());
-                case 3: assertEquals(YOUTUBE_URL,driver.getCurrentUrl());
+                case 0: assertEquals(LINKEDIN_URL,driver.getCurrentUrl());break;
+                case 1: assertEquals(FACEBOOK_URL,driver.getCurrentUrl());break;
+                case 2: assertEquals(X_URL,driver.getCurrentUrl());break;
+                case 3: assertTrue(Objects.requireNonNull(driver.getCurrentUrl()).contains("OrangeHRMInc"));break;
             }
             driver.close();
             driver.switchTo().window((String)windowHandles[0]); // Switch to the main tab
