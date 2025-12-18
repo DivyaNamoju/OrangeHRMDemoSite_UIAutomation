@@ -115,7 +115,7 @@ mvn verify
 
 This project can be run in CI using GitHub Actions. Maven Cucumber reporting can accessed at:
 
-https://github.com/DivyaNamoju/OrangeHRMDemoSite_UIAutomation
+[https://github.com/DivyaNamoju/OrangeHRMDemoSite_UIAutomation](https://divyanamoju.github.io/OrangeHRMDemoSite_UIAutomation/)
 
 ---
 
