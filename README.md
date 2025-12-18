@@ -100,7 +100,7 @@ mvn test
 - Run a specific TestNG suite or test class via Maven/Surefire options (example):
 
 ```bash
-mvn -Dtest=TestRunnerJunit test
+mvn -Dtest=TestRunnerTestNGParallel test
 ```
 - Generate the cucumber HTML report (the reporting plugin runs in `verify` phase):
 
@@ -113,74 +113,23 @@ mvn verify
 
 ## 🔁 CI / CD — GitHub Actions
 
-This project can be run in CI using GitHub Actions or Jenkins. Below are example configurations and recommendations.
+This project can be run in CI using GitHub Actions. Maven Cucumber reporting can accessed at:
 
-### GitHub Actions (example workflow)
+https://github.com/DivyaNamoju/OrangeHRMDemoSite_UIAutomation
 
-Create `.github/workflows/maven.yml` containing (example):
-
-```yaml
-name: Java CI with Maven
-
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Set up JDK 17
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'temurin'
-          java-version: '17'
-      - name: Cache Maven packages
-        uses: actions/cache@v4
-        with:
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-maven-
-      - name: Run tests and generate reports
-        run: mvn -B -DskipTests=false verify
-      - name: Upload cucumber report and artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: cucumber-report
-          path: |
-            target/cucumber-report
-            target/cucumber.json
-```
+---
 
 ## 🧾 Example test run output (sample)
 
 When you run `mvn test` you will see an output similar to the following (truncated example):
 
-```text
-[INFO] -------------------------------------------------------
-[INFO]  T E S T S
-[INFO] -------------------------------------------------------
-[INFO] Running org.example.test.TestRunnerTestNG
-2025-12-17 12:34:56 INFO  BaseClass: Starting ChromeDriver
-2025-12-17 12:35:00 INFO  LoginSteps: Given I am on the login page
-2025-12-17 12:35:03 INFO  LoginSteps: When I enter valid credentials
-2025-12-17 12:35:12 INFO  LoginSteps: Then I should be logged in
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.123 s - in org.example.test.TestRunnerTestNG
-[INFO] 
-[INFO] --- maven-surefire-plugin:3.5.4:test (default-test) @ OrangeHRM_DemoSiteUIAutomation ---
-[INFO] BUILD SUCCESS
-```
-
-Reports and artifacts are stored under `target/` — e.g., `target/cucumber.json`, `target/cucumber-report`, and `target/cucumber-html-report.html`.
+<img width="886" height="213" alt="image" src="https://github.com/user-attachments/assets/dd6020c7-8ce2-4994-98b4-f16e49326b7f" />
 
 ---
 
 ## 📷 Example screenshot
 
+<img width="778" height="439" alt="TC_002 Validate a warning message is displayed when user logs in using invalid credentials" src="https://github.com/user-attachments/assets/a1354f01-20d3-451a-8106-d5496337d4b1" />
 
 
 ## 📊 Reports & Artifacts
