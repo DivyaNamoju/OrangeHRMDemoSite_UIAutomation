@@ -29,7 +29,7 @@ jobs:
           java-version: 17
       - name: Build with Maven
         run: mvn -B clean verify
-      - name: Deploy
+      - name: Deploy Cucumber report page to Github Page
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
