@@ -14,6 +14,11 @@ on:
   pull_request:
     branches: [ "main" ]
 
+permissions: 
+  contents: read 
+  pages: write 
+  id-token: write    
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -27,30 +32,19 @@ jobs:
         with:
           distribution: temurin
           java-version: 17
-
-      - name: Build with Maven
+      - name: Build with Maven (tests + report)
         run: mvn -B clean verify
 
-      - name: Generate Cucumber Report
-        run: mvn net.masterthought:maven-cucumber-reporting:generate -Dcucumber.jsonFiles=**/cucumber*.json
-
-      - name: Upload report artifact
+      - name: Upload Cucumber HTML report artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: target/cucumber-html-reports
+          path: ./target/cucumber-reports/cucumber-html-reports
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v4
