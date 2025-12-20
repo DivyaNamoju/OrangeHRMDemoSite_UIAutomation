@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Cucumber Suite" parallel="tests" thread-count="2">
-    <test name="Cucumber Test">
+<suite name="Cucumber Suite">
+    <test name="Cucumber Test-1">
         <classes>
             <class name="testRunner.TestRunnerTestNG"/>
         </classes>

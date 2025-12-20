@@ -1,5 +1,1 @@
-2025-12-18 15:58:30 INFO  Hooks - Navigated to application URL
-2025-12-18 15:58:30 INFO  Hooks - Enter username : Admin
-2025-12-18 15:58:31 INFO  Hooks - Entered password : admin123
-2025-12-18 15:58:31 INFO  Hooks - Clicked in Login button
-2025-12-18 15:59:23 INFO  Hooks - Scenario TC_001 Validate that user can login using the valid login credentials is Passed
+2025-12-20 16:25:37 INFO  Hooks - Initializing WebDriver ==> chrome

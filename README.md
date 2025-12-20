@@ -20,7 +20,13 @@ This repository contains an automated UI test framework built with Java, using C
 > Note: The exact dependency versions are declared in `pom.xml` (e.g., Cucumber, Selenium, TestNG, Log4j2).
 
 ---
+## ⚙️ Configuration & Environment
 
+- **Java**: Install Java 17 and set `JAVA_HOME`.
+- **Maven**: Install Maven and ensure `mvn` is in PATH.
+- **Docker**: Install docker to run tests on Selenium Grid
+
+---
 ## 📁 Folder Structure
 
 Below is the main project tree (top-level important files and folders):
@@ -118,6 +124,15 @@ This project can be run in CI using GitHub Actions. Maven Cucumber reporting can
 [https://github.com/DivyaNamoju/OrangeHRMDemoSite_UIAutomation](https://divyanamoju.github.io/OrangeHRMDemoSite_UIAutomation/)
 
 ---
+## Runnings Tests on Docker
+
+Make sure Docker Desktop is running. Execute the below command to run the containers.
+
+```bash
+docker compose -f docker-compose-v3.yml up
+```
+
+---
 
 ## 🧾 Example test run output (sample)
 
@@ -138,14 +153,6 @@ When you run `mvn test` you will see an output similar to the following (truncat
 - **Cucumber HTML**: `target/cucumber-html-report.html` (or generated under `target/cucumber-report` by the reporting plugin).
 - **Screenshots**: saved in `/screenshots` on failures.
 - **Logs**: saved in `/logs` (configurable via `log4j2.properties`).
-
----
-
-## ⚙️ Configuration & Environment
-
-- **Java**: Install Java 17 and set `JAVA_HOME`.
-- **Maven**: Install Maven and ensure `mvn` is in PATH.
-- **Browsers & Drivers**: Browser setup can be configured in config.properties file.
 
 ---
 

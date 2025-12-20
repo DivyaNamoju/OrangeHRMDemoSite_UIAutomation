@@ -11,5 +11,4 @@ public class BaseClass {
     public static final String LINKEDIN_URL= ReadProperties.getTestData("LinkedinURL");
     public static final String FACEBOOK_URL= ReadProperties.getTestData("FacebookURL");
     public static final String X_URL= ReadProperties.getTestData("XURL");
-    public static final String YOUTUBE_URL= ReadProperties.getTestData("YouTubeURL");
 }
