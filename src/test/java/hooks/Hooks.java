@@ -28,6 +28,9 @@ import java.nio.file.Paths;
 import static baseClass.EnvParams.BROWSER;
 import static baseClass.EnvParams.EXECUTION_ENV;
 
+/**
+ * Before and After methods that will execute before and after each test scenario
+ */
 
 public class Hooks {
 

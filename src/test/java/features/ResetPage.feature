@@ -1,3 +1,5 @@
+# Reset password functionality
+
 Feature: Reset Page functionality
 
   @login @reset

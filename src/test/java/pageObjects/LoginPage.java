@@ -17,6 +17,10 @@ import static hooks.Hooks.log;
 import static org.testng.AssertJUnit.assertEquals;
 import static org.testng.AssertJUnit.assertTrue;
 
+/**
+ * Login page element locators and methods
+ */
+
 public class LoginPage extends BasePage {
 
     WebDriver driver = Hooks.getDriver();

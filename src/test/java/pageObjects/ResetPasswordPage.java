@@ -6,6 +6,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+/**
+ * Reset password page locators and methods
+ */
+
 public class ResetPasswordPage extends BasePage {
 
     @FindBy(className = "orangehrm-login-forgot-header") WebElement forgotPasswordLink;

@@ -2,6 +2,10 @@ package baseClass;
 
 import utils.ReadProperties;
 
+/**
+ * Enviroment paramaters
+ */
+
 public class EnvParams {
 
     public static final String ENV= ReadProperties.getConfig("env");

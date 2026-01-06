@@ -2,6 +2,9 @@ package baseClass;
 
 import utils.ReadProperties;
 
+/**
+ * Base class for all the test data properties
+ */
 public class BaseClass {
 
     public static final String BASE_URL= ReadProperties.getTestData("BaseURL");
